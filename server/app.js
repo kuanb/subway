@@ -18,27 +18,24 @@ var bodyParser = require("body-parser");
 app.set("view engine", "ejs");
 app.use("/static", express.static("public"));
 app.use("/modules", express.static("node_modules"));
-app.use(cookieParser());
 
 
 // CONFIGURATION STEPS PT2
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
-app.use(flash());
-app.use(session({
-  keys: [SESS_SECRET],
-  name: "subwayGameAppSessionName",
-}));
-
 
 // ALL ROUTES
 // Always run before routes
-require("../routes/request-defaults")(app);
+require("../utilities/defaultActions")(app);
 
 // Route Set 1
 var routeExample = require("../routes/example");
 app.use("/test", routeExample)
+
+// Route Set 2
+var renderGame = require("../routes/renderGame");
+app.use("/game", renderGame)
 
 
 // START UP CLIENTCOMM
