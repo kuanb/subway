@@ -1,0 +1,22 @@
+{
+  "name": "subway",
+  "version": "1.0.0",
+  "description": "Modification of subway game.",
+  "main": "server/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuanb/subway.git"
+  },
+  "keywords": [
+    "transit"
+  ],
+  "author": "Kuan Butts (kuanbutts@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kuanb/subway/issues"
+  },
+  "homepage": "https://github.com/kuanb/subway#readme"
+}
