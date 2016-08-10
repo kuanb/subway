@@ -4,7 +4,7 @@
   "description": "Modification of subway game.",
   "main": "server/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Alert: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/kuanb/subway/issues"
   },
-  "homepage": "https://github.com/kuanb/subway#readme"
+  "homepage": "https://github.com/kuanb/subway#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2"
+  }
 }
