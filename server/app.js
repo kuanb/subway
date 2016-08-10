@@ -1,6 +1,6 @@
 
 
-// SECRET STUFF
+// SECRETS
 var credentials = require("../credentials");
 var SESS_SECRET = credentials.sessionSecret;
 
@@ -46,7 +46,6 @@ var port = 4040;
 var server = app.listen(port, function () { 
   console.log("Subway app up and running on port", port);
 });
-
 
 
 // EXPORT SERVER
