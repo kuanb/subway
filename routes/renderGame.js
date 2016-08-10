@@ -7,7 +7,7 @@ var router = express.Router();
 
 // BASIC RESPONSE
 router.get("/", function (req, res) {
-  res.send("game view.")
+  res.render("game/main")
 });
 
 

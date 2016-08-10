@@ -24,6 +24,10 @@
     "express": "^4.14.0"
   },
   "devDependencies": {
+    "ejs": "^2.5.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
     "nodemon": "^1.10.0"
   }
 }

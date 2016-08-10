@@ -2,6 +2,8 @@
 
 var gulp = require("gulp");
 var sass = require("gulp-sass");
+var concat = require("gulp-concat");
+var uglify = require("gulp-uglify");
 
 // Compile all SASS into CSS and place in Public folder under CSS
 gulp.task("sass", function () {
@@ -14,3 +16,29 @@ gulp.task("sass", function () {
 gulp.task("sass:watch", function () {
   gulp.watch("./gulp/sass/**/*.scss", ["sass"]);
 });
+
+// Roll all Leaflet utilities that were clumped in JS file from single folder into single file
+gulp.task("leafletModules", function () {
+  gulp.src("./gulp/leafletModules/*.js")
+    .pipe(gp_concat("leafletModules.js"))
+    .pipe(gulp.dest("./public/js"))
+    .pipe(gp_uglify())
+    .pipe(gulp.dest("./public/js"));
+    
+
+        // .pipe(gp_concat('concat.js'))
+        // .pipe(gulp.dest('dist'))
+        // .pipe(gp_rename('uglify.js'))
+        // .pipe(gp_uglify())
+        // .pipe(gulp.dest('dist'));
+
+});
+
+// Tell Gulp to watch the leafletModules folder for changes
+gulp.task("leafletModules:watch", function () {
+  gulp.watch("./gulp/leafletModules/*.js", ["leafletModules"]);
+});
+
+
+// Run all
+gulp.task("default", ["sass:watch", "leafletModules:watch"], function () {});
