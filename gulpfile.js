@@ -20,18 +20,8 @@ gulp.task("sass:watch", function () {
 // Roll all Leaflet utilities that were clumped in JS file from single folder into single file
 gulp.task("leafletModules", function () {
   gulp.src("./gulp/leafletModules/*.js")
-    .pipe(gp_concat("leafletModules.js"))
-    .pipe(gulp.dest("./public/js"))
-    .pipe(gp_uglify())
+    .pipe(concat("leafletModules.js"))
     .pipe(gulp.dest("./public/js"));
-    
-
-        // .pipe(gp_concat('concat.js'))
-        // .pipe(gulp.dest('dist'))
-        // .pipe(gp_rename('uglify.js'))
-        // .pipe(gp_uglify())
-        // .pipe(gulp.dest('dist'));
-
 });
 
 // Tell Gulp to watch the leafletModules folder for changes
