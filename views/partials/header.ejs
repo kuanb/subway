@@ -26,27 +26,16 @@
   <script src="https://cdn.jsdelivr.net/leaflet.esri/2.0.0-beta.8/esri-leaflet.js"></script>
 
 </head>
+
 <body>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet.esri.geocoder/2.0.2/esri-leaflet-geocoder.css">
     <script src="https://cdn.jsdelivr.net/leaflet.esri.geocoder/2.0.2/esri-leaflet-geocoder.js"></script>
 
+    <!-- TO DO: Let's see if we can use vanilla Leaflet -->
     <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
     <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
 
-    <script src="js/leaflet.curve.js"></script>
-    <script src='js/leaflet-pip.js'></script>
-    <script src='js/turf.min.js'></script>
-    <script src='js/spline.js'></script>
-    <script src='js/bezier.js'></script>
-    
-    <script src='js/subway-settings.js'></script>
-    <script src='js/subway-utils.js'></script>
-    <script src='js/subway-files.js'></script>
-    <script src='js/subway-id-generator.js'></script>
-    <script src='js/subway-station.js'></script>
-    <script src='js/subway-line.js'></script>
-    <script src='js/subway-transfer.js'></script>
-    <script src='js/subway-geocoding.js'></script>
-    <script src='js/subway-map-events.js'></script>
-    <script src='js/subway-data.js'></script>
+    <!-- Load all bundled Leaflet modules -->
+    <!-- TO DO: Do we need all of these?! -->
+    <script src="static/js/leafletModules.js"></script>
